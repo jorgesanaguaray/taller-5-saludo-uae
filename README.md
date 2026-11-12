@@ -17,6 +17,8 @@ flutter run -d ID_DEL_EMULADOR
 
 Sustituye `ID_DEL_EMULADOR` por el identificador que muestra `flutter devices`. El proyecto se generó con Flutter 3.47.7 y Dart 3.13.5.
 
+La aplicación se compiló y ejecutó en un Pixel 5 con Android 17 (API 37). `flutter doctor -v` aprobó Flutter y la cadena de herramientas de Android. La única advertencia fue por los componentes de Visual Studio necesarios para compilar aplicaciones de escritorio para Windows.
+
 ## Probar el formulario
 
 1. Pulsa **Saludar** con el campo vacío. Debe aparecer «Ingresa tu nombre para continuar.».
@@ -28,11 +30,21 @@ flutter analyze
 flutter test
 ```
 
+El análisis terminó sin incidencias y la prueba de widgets pasó. La prueba cubre el campo vacío, el saludo con espacios alrededor del nombre y el envío por teclado de un campo con solo espacios.
+
+| Formulario inicial | Campo vacío | Saludo |
+| --- | --- | --- |
+| <img src="docs/capturas/formulario.png" width="200" alt="Formulario inicial de Saludo UAE"> | <img src="docs/capturas/nombre-vacio.png" width="200" alt="Aviso para ingresar un nombre"> | <img src="docs/capturas/saludo.png" width="200" alt="Saludo a Juan en el emulador Android"> |
+
 ## Comprobar Hot Reload
 
 1. Ejecuta la app en modo debug y saluda a Juan.
 2. Cambia temporalmente el título `Saludo UAE` del `AppBar` en [lib/main.dart](lib/main.dart), guarda y pulsa `r` en la consola de `flutter run`.
 3. Comprueba que el título cambia y que el nombre escrito y el saludo siguen en pantalla. Restaura el título y pulsa `r` de nuevo.
+
+En el Pixel 5, Flutter informó **713 ms** al cambiar el título a «Saludo UAE · Hot Reload» y **648 ms** al restaurar el título original. El campo conservó `Juan` y el resultado siguió mostrando «¡Hola, Juan! Bienvenido a la UAE».
+
+<img src="docs/capturas/hot-reload.png" width="220" alt="Título temporal de Hot Reload con el nombre Juan y el saludo conservados">
 
 ## Android nativo y Flutter
 
