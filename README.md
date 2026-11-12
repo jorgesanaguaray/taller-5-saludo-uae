@@ -4,6 +4,16 @@ Taller 5 · Lenguaje de Programación 5 · Universidad Agraria del Ecuador
 
 Aplicación Flutter que muestra «¡Hola, Juan! Bienvenido a la UAE» al pulsar **Saludar** después de escribir Juan. Si el campo está vacío o contiene únicamente espacios, la pantalla solicita un nombre. La interfaz y la lógica están en [lib/main.dart](lib/main.dart), con comentarios en cada línea de código.
 
+## Integrantes del grupo
+
+**Paralelo 6SB · Grupo 6**
+
+1. Luna Peñafiel Romina
+2. Pérez Abad Evelyn
+3. Saa Chichande Solange
+4. Sanaguaray Gusqui Jorge
+5. Solís Calderón Dayanna
+
 ## Ejecutar en Android
 
 Abre la carpeta del proyecto en Android Studio con los complementos de Flutter y Dart. Inicia un dispositivo virtual desde **Device Manager** y ejecuta estos comandos desde la raíz del proyecto.
